@@ -1,0 +1,18 @@
+
+    <% if (character) { %>
+        <h1>Character</h1>
+        <p>Id: <%= character.id %></p>
+        <p>First Name: <%= character.firstName %></p>
+        <p>Last Name: <%= character.lastName %></p>
+        <p>Full Name: <%= character.fullName %></p>
+        <p>Title(s): <%= character.title %></p>
+        <p>Family: <%= character.family %></p>
+        <p>Born: <%= character.born || "That info is not given" %></p>
+        <p>Death: <%= character.died || "Does not apply" %></p>
+        <img src="<%= character.imageUrl %>" alt="<%= character.imageUrl %>" onerror="this.onerror=null; this.outerHTML='<p>' + this.alt + '</p>';" />
+    <% } else { %>
+        <p>Your character is not available D:</p>
+    <% } %>
+    
+    
+    
